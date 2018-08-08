@@ -1,5 +1,5 @@
 {
-    "name": "stuberm/daypaio",
+    "name": "wirthhorn/daypaio",
     "description": "A simple PHP Daypaio API client",
 	"type": "library",
 	"require": {
