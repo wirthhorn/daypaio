@@ -1,5 +1,5 @@
 # daypaio
-A simple PHP Daypaio API client.
+A simple PHP client for the Daypaio API.
 
 ## Requirements
 PHP 7
@@ -15,7 +15,7 @@ use Daypaio;
 
 $daypaio = new Daypaio([
 	'access_token' => 'Enter access token',
-	'environmet' => 'stage' // valid: stage, production
+	'environment' => 'stage' // valid: stage, production
 ]);
 ```
 
