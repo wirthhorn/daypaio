@@ -22,7 +22,7 @@ $daypaio = new Daypaio([
 ### List interestchannels
 
 ```php
-$daypaio->interestchannels->get();
+$daypaio->interestchannel->get();
 ```
 
 ### List shops
