@@ -1,0 +1,29 @@
+{
+    "name": "stuberm/daypaio",
+    "description": "A simple PHP Daypaio API client",
+	"type": "library",
+	"require": {
+		"php": "^7",
+		"guzzlehttp/guzzle": "*"
+	},
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Stuber",
+            "email": "stuber@wirth-horn.de"
+        }
+	],
+	"autoload": {
+		"psr-4": {
+			"Daypaio\\": "src/Daypaio/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Daypaio\\Tests\\": "tests/"
+		}
+	}
+}
