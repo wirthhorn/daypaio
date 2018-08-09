@@ -3,28 +3,20 @@ namespace Daypaio;
 
 class Consumer extends Resource
 {
-	public function get($id)
-	{
-		
-	}
-
 	/**
 	 * POST /consumer
 	 *
 	 */
-	public function create($data)
+	public function post($data)
 	{
-		var_dump($this->getUrl());
-
 		try {
 			$client = new \GuzzleHttp\Client();
 			$response = $client->request('POST', $this->getUrl(), [
 				'json' => $data,
-				'verify' => false,
-				'debug' => true
+				'verify' => false
 			]);
 
-			return $response->getBody();
+			return json_decode($response->getBody()->getContents(), true);
 		} catch (\Exception $e) {
 			return $e->getMessage();
 		}

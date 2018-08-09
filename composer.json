@@ -1,6 +1,7 @@
 {
     "name": "wirthhorn/daypaio",
-    "description": "A simple PHP Daypaio API client",
+	"description": "A simple PHP Daypaio API client",
+	"version": "0.1.1",
 	"type": "library",
 	"require": {
 		"php": "^7",

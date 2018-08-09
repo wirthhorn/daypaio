@@ -47,7 +47,9 @@ class Daypaio
 	private function initResources()
 	{
 		$this->consumer 		= new Consumer($this->config);
+		$this->delete 			= new Delete($this->config);
 		$this->interestchannel 	= new Interestchannel($this->config);
+		$this->query 			= new Query($this->config);
 		$this->shops 			= new Shops($this->config);
 	}
 }

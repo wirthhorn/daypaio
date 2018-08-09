@@ -34,14 +34,29 @@ $daypaio->shops->get();
 ### Create a new consumer
 
 ```php
-$daypaio->consumer->create([
+$daypaio->consumer->post([
 	"email" => "foo@bar.com",
   	"t" => "lead",
   	"first_name" => "foo",
   	"interestchannels" => [],
-  	"preferedShop" => "",
+  	"preferredShop" => "",
   	"ext_id" => ""
 ]);
+```
+
+### Search a consumer
+
+```php
+$daypaio->query->get(
+	["email" => "stuber@wirth-horn.de"], // search parameters
+	["id", "email"] // fields to return
+);
+```
+
+### Delete an existing consumer
+
+```php
+$daypaio->delete->post("consumer", "5b2a63c2d848af4cc12ecf44");
 ```
 
 ## Tests
