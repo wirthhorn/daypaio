@@ -5,7 +5,7 @@ use Daypaio\Daypaio;
 
 final class InterestchannelTest extends DaypaioTestCase 
 {
-	public function setUp(): void {
+	public function setUp() {
 		parent::setUp();
 		$this->daypaio = new Daypaio(
 			array_merge($this->daypaio->config, [
@@ -14,14 +14,14 @@ final class InterestchannelTest extends DaypaioTestCase
 		);
 	}
 
-	public function testUrl(): void {
+	public function testUrl() {
 		$this->assertEquals(
 			'https://app.daypaio.com/api/interestchannel?access_token=' . $this->daypaio->config['access_token'],
 			$this->daypaio->interestchannel->getUrl()
 		);
 	}
 
-	public function testGet(): void
+	public function testGet()
 	{
 		$interestchannels = $this->daypaio->interestchannel->get();
 		$this->assertInternalType('array', $interestchannels);

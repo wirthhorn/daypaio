@@ -5,7 +5,7 @@ use Daypaio\Daypaio;
 
 final class QueryTest extends DaypaioTestCase 
 {
-	public function testGet(): void
+	public function testGet()
 	{
 		$results = $this->daypaio->query->get(['email' => 'stuber@wirth-horn.de'], ['_id', 'email']);
 		$this->assertInternalType('array', $results);

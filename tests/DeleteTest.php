@@ -5,7 +5,7 @@ use Daypaio\Daypaio;
 
 final class DeleteTest extends DaypaioTestCase 
 {
-	public function testPost(): void
+	public function testPost()
 	{
 		$results = $this->daypaio->query->get(['email' => 'stuber@wirth-horn.de'], ['_id', 'email']);
 		if (Count($results['r']) > 0) 

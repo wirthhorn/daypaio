@@ -5,7 +5,7 @@ use Daypaio\Utils;
 
 final class ConsumerTest extends DaypaioTestCase 
 {
-	public function testUrl(): void
+	public function testUrl()
 	{
 		$this->assertEquals(
 			'https://stage.daypaio.com/api/consumer?access_token=' . $this->daypaio->config['access_token'],
@@ -13,7 +13,7 @@ final class ConsumerTest extends DaypaioTestCase
 		);
 	}
 
-	public function testCreate(): void 
+	public function testCreate() 
 	{
 		$result = $this->daypaio->consumer->post([
 			'email' 			=> 'stuber@wirth-horn.de',

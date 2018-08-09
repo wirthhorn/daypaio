@@ -5,7 +5,7 @@ use Daypaio\Daypaio;
 
 final class ShopsTest extends DaypaioTestCase 
 {
-	public function setUp(): void {
+	public function setUp() {
 		parent::setUp();
 		$this->daypaio = new Daypaio(
 			array_merge($this->daypaio->config, [
@@ -14,14 +14,14 @@ final class ShopsTest extends DaypaioTestCase
 		);
 	}
 
-	public function testUrl(): void {
+	public function testUrl() {
 		$this->assertEquals(
 			'https://app.daypaio.com/api/shops?access_token=' . $this->daypaio->config['access_token'],
 			$this->daypaio->shops->getUrl()
 		);
 	}
 
-	public function testGet(): void
+	public function testGet()
 	{
 		$shops = $this->daypaio->shops->get();
 		$this->assertInternalType('array', $shops);
